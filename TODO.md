@@ -1,0 +1,3 @@
+- [x] Update HeroSection.tsx: Replace Lucide icons with icon-1.png, icon-2.png, icon-3.png for trust indicators
+- [x] Update ProblemsSection.tsx: Replace Lucide icons with icon-1.png, icon-2.png, icon-3.png (cycling), make rounded
+- [x] Update ContactFormModal.tsx: Include all form data in WhatsApp message on submit
