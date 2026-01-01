@@ -42,10 +42,10 @@ const trustPoints = [
 
 export const TrustSection = () => {
   return (
-    <section className="py-8 md:py-16 bg-background">
+    <section className="py-6 md:py-12 bg-background">
       <div className="container px-4">
-        <div className="max-w-3xl mx-auto text-center mb-8 md:mb-12">
-          <h2 className="text-2xl md:text-4xl font-bold text-foreground mb-3 md:mb-4">
+        <div className="max-w-3xl mx-auto text-center mb-6 md:mb-10">
+          <h2 className="text-2xl md:text-4xl font-bold text-foreground mb-2 md:mb-3">
             Why Students Choose Us
           </h2>
           <p className="text-muted-foreground text-sm md:text-lg">
@@ -53,11 +53,11 @@ export const TrustSection = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-4 max-w-5xl mx-auto">
           {trustPoints.map((point, index) => (
             <div
               key={index}
-              className="flex items-start gap-3 md:gap-4 p-4 md:p-6 rounded-xl bg-gradient-to-br from-secondary/50 to-transparent"
+              className="flex items-start gap-3 md:gap-4 p-3 md:p-5 rounded-xl bg-gradient-to-br from-secondary/50 to-transparent"
             >
               <div className="flex-shrink-0 w-10 h-10 md:w-12 md:h-12 rounded-full bg-primary/10 flex items-center justify-center">
                 <point.icon className="w-5 h-5 md:w-6 md:h-6 text-primary" />

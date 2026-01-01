@@ -23,10 +23,10 @@ const steps = [
 
 export const HowItWorksSection = () => {
   return (
-    <section id="how-it-works" className="py-8 md:py-16 bg-secondary/30">
+    <section id="how-it-works" className="py-6 md:py-12 bg-secondary/30">
       <div className="container px-4">
-        <div className="max-w-3xl mx-auto text-center mb-8 md:mb-12">
-          <h2 className="text-2xl md:text-4xl font-bold text-foreground mb-3 md:mb-4">
+        <div className="max-w-3xl mx-auto text-center mb-6 md:mb-10">
+          <h2 className="text-2xl md:text-4xl font-bold text-foreground mb-2 md:mb-3">
             Getting Started is Easy
           </h2>
           <p className="text-muted-foreground text-sm md:text-lg">
@@ -35,7 +35,7 @@ export const HowItWorksSection = () => {
         </div>
 
         <div className="max-w-4xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
             {steps.map((step, index) => (
               <div key={index} className="relative text-center">
                 {/* Connector line */}
@@ -44,13 +44,13 @@ export const HowItWorksSection = () => {
                 )}
                 
                 <div className="relative inline-flex flex-col items-center">
-                  <div className="w-20 h-20 md:w-24 md:h-24 rounded-2xl bg-card border border-border/50 shadow-soft flex items-center justify-center mb-4 md:mb-6 relative">
+                  <div className="w-20 h-20 md:w-24 md:h-24 rounded-2xl bg-card border border-border/50 shadow-soft flex items-center justify-center mb-3 md:mb-4 relative">
                     <step.icon className="w-8 h-8 md:w-10 md:h-10 text-primary" />
                     <span className="absolute -top-2 -right-2 md:-top-3 md:-right-3 w-6 h-6 md:w-8 md:h-8 rounded-full bg-primary text-primary-foreground text-xs md:text-sm font-bold flex items-center justify-center">
                       {step.number}
                     </span>
                   </div>
-                  <h3 className="font-semibold text-foreground text-base md:text-lg mb-1 md:mb-2">{step.title}</h3>
+                  <h3 className="font-semibold text-foreground text-base md:text-lg mb-1">{step.title}</h3>
                   <p className="text-xs md:text-sm text-muted-foreground max-w-[200px]">{step.description}</p>
                 </div>
               </div>

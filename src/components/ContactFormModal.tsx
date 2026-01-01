@@ -147,37 +147,43 @@ export const ContactFormModal = ({
     switch (step) {
       case 1:
         return (
-          <div className="space-y-6">
-            <div>
-              <Label className="text-base font-medium text-foreground mb-3 block">What type of project do you need help with?</Label>
-              <div className="grid grid-cols-2 gap-2">
+          <div className="space-y-4 sm:space-y-6">
+            <div className="space-y-2 sm:space-y-3">
+              <Label className="text-base font-medium text-foreground block">
+                What type of project do you need help with?
+              </Label>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                 {projectTypes.map((type) => (
                   <button
                     key={type}
                     onClick={() => updateFormData("project_type", type)}
-                    className={`p-3 text-sm rounded-lg border transition-all text-left ${
+                    className={`p-3 sm:p-3.5 text-sm sm:text-base rounded-lg border transition-all text-left w-full min-h-[44px] sm:min-h-[48px] ${
                       formData.project_type === type
                         ? "border-primary bg-primary/10 text-primary"
-                        : "border-border hover:border-primary/50"
+                        : "border-border hover:border-primary/50 hover:bg-muted/50"
                     }`}
+                    type="button"
                   >
                     {type}
                   </button>
                 ))}
               </div>
             </div>
-            <div>
-              <Label className="text-base font-medium text-foreground mb-3 block">Your education level?</Label>
-              <div className="grid grid-cols-3 gap-2">
+            <div className="space-y-2 sm:space-y-3">
+              <Label className="text-base font-medium text-foreground block">
+                Your education level?
+              </Label>
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
                 {educationLevels.map((level) => (
                   <button
                     key={level}
                     onClick={() => updateFormData("education_level", level)}
-                    className={`p-3 text-sm rounded-lg border transition-all ${
+                    className={`p-3 sm:p-3.5 text-sm sm:text-base rounded-lg border transition-all w-full min-h-[44px] sm:min-h-[48px] ${
                       formData.education_level === level
                         ? "border-primary bg-primary/10 text-primary"
-                        : "border-border hover:border-primary/50"
+                        : "border-border hover:border-primary/50 hover:bg-muted/50"
                     }`}
+                    type="button"
                   >
                     {level}
                   </button>
@@ -188,37 +194,43 @@ export const ContactFormModal = ({
         );
       case 2:
         return (
-          <div className="space-y-6">
-            <div>
-              <Label className="text-base font-medium text-foreground mb-3 block">Your field of study?</Label>
-              <div className="grid grid-cols-2 gap-2">
+          <div className="space-y-4 sm:space-y-6">
+            <div className="space-y-2 sm:space-y-3">
+              <Label className="text-base font-medium text-foreground block">
+                Your field of study?
+              </Label>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                 {fieldsOfStudy.map((field) => (
                   <button
                     key={field}
                     onClick={() => updateFormData("field_of_study", field)}
-                    className={`p-3 text-sm rounded-lg border transition-all text-left ${
+                    className={`p-3 sm:p-3.5 text-sm sm:text-base rounded-lg border transition-all text-left w-full min-h-[44px] sm:min-h-[48px] ${
                       formData.field_of_study === field
                         ? "border-primary bg-primary/10 text-primary"
-                        : "border-border hover:border-primary/50"
+                        : "border-border hover:border-primary/50 hover:bg-muted/50"
                     }`}
+                    type="button"
                   >
                     {field}
                   </button>
                 ))}
               </div>
             </div>
-            <div>
-              <Label className="text-base font-medium text-foreground mb-3 block">When is your deadline?</Label>
-              <div className="grid grid-cols-2 gap-2">
+            <div className="space-y-2 sm:space-y-3">
+              <Label className="text-base font-medium text-foreground block">
+                When is your deadline?
+              </Label>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                 {deadlineOptions.map((deadline) => (
                   <button
                     key={deadline}
                     onClick={() => updateFormData("deadline", deadline)}
-                    className={`p-3 text-sm rounded-lg border transition-all text-left ${
+                    className={`p-3 sm:p-3.5 text-sm sm:text-base rounded-lg border transition-all text-left w-full min-h-[44px] sm:min-h-[48px] ${
                       formData.deadline === deadline
                         ? "border-primary bg-primary/10 text-primary"
-                        : "border-border hover:border-primary/50"
+                        : "border-border hover:border-primary/50 hover:bg-muted/50"
                     }`}
+                    type="button"
                   >
                     {deadline}
                   </button>
@@ -229,54 +241,62 @@ export const ContactFormModal = ({
         );
       case 3:
         return (
-          <div className="space-y-4">
-            <div>
-              <Label htmlFor="name" className="text-foreground">Your Name *</Label>
+          <div className="space-y-3 sm:space-y-4">
+            <div className="space-y-1.5 sm:space-y-2">
+              <Label htmlFor="name" className="text-foreground text-sm sm:text-base">
+                Your Name *
+              </Label>
               <Input
                 id="name"
                 value={formData.name}
                 onChange={(e) => updateFormData("name", e.target.value)}
                 placeholder="Enter your name"
-                className="mt-1"
+                className="h-11 sm:h-12 text-sm sm:text-base"
               />
             </div>
-            <div>
-              <Label htmlFor="email" className="text-foreground">Email Address *</Label>
+            <div className="space-y-1.5 sm:space-y-2">
+              <Label htmlFor="email" className="text-foreground text-sm sm:text-base">
+                Email Address *
+              </Label>
               <Input
                 id="email"
                 type="email"
                 value={formData.email}
                 onChange={(e) => updateFormData("email", e.target.value)}
                 placeholder="your.email@example.com"
-                className="mt-1"
+                className="h-11 sm:h-12 text-sm sm:text-base"
               />
             </div>
-            <div>
-              <Label htmlFor="phone" className="text-foreground">Phone/WhatsApp Number (Optional)</Label>
+            <div className="space-y-1.5 sm:space-y-2">
+              <Label htmlFor="phone" className="text-foreground text-sm sm:text-base">
+                Phone/WhatsApp Number (Optional)
+              </Label>
               <Input
                 id="phone"
                 value={formData.phone}
                 onChange={(e) => updateFormData("phone", e.target.value)}
                 placeholder="03XX-XXXXXXX"
-                className="mt-1"
+                className="h-11 sm:h-12 text-sm sm:text-base"
               />
             </div>
           </div>
         );
       case 4:
         return (
-          <div className="space-y-4">
-            <div>
-              <Label htmlFor="message" className="text-foreground">Additional Details (Optional)</Label>
+          <div className="space-y-3 sm:space-y-4">
+            <div className="space-y-1.5 sm:space-y-2">
+              <Label htmlFor="message" className="text-foreground text-sm sm:text-base">
+                Additional Details (Optional)
+              </Label>
               <Textarea
                 id="message"
                 value={formData.message}
                 onChange={(e) => updateFormData("message", e.target.value)}
                 placeholder="Tell us more about your project, specific requirements, or any questions..."
-                className="mt-1 min-h-[120px]"
+                className="min-h-[100px] sm:min-h-[120px] text-sm sm:text-base"
               />
             </div>
-            <div className="bg-muted/50 p-4 rounded-lg space-y-2 text-sm">
+            <div className="bg-muted/50 p-3 sm:p-4 rounded-lg space-y-1.5 sm:space-y-2 text-xs sm:text-sm">
               <p className="font-medium text-foreground">Summary:</p>
               <p><span className="text-muted-foreground">Project:</span> {formData.project_type}</p>
               <p><span className="text-muted-foreground">Level:</span> {formData.education_level}</p>
@@ -295,43 +315,51 @@ export const ContactFormModal = ({
       <DialogTrigger asChild>
         {children}
       </DialogTrigger>
-      <DialogContent className="sm:max-w-lg">
-        <DialogHeader>
-          <DialogTitle className="text-xl font-semibold text-foreground">
+      <DialogContent className="max-w-[95vw] sm:max-w-lg mx-auto p-4 sm:p-6">
+        <DialogHeader className="space-y-3 sm:space-y-4">
+          <DialogTitle className="text-lg sm:text-xl font-semibold text-foreground text-center sm:text-left">
             {step === 4 ? "Almost Done!" : "Tell Us About Your Project"}
           </DialogTitle>
-          <div className="flex items-center gap-2 pt-2">
-            {Array.from({ length: totalSteps }).map((_, i) => (
-              <div
-                key={i}
-                className={`h-1 flex-1 rounded-full transition-colors ${
-                  i < step ? "bg-primary" : "bg-muted"
-                }`}
-              />
-            ))}
+          <div className="space-y-1.5 sm:space-y-2">
+            <div className="flex items-center gap-2">
+              {Array.from({ length: totalSteps }).map((_, i) => (
+                <div
+                  key={i}
+                  className={`h-1.5 sm:h-2 flex-1 rounded-full transition-colors ${
+                    i < step ? "bg-primary" : "bg-muted"
+                  }`}
+                />
+              ))}
+            </div>
+            <p className="text-xs sm:text-sm text-muted-foreground text-center sm:text-left">
+              Step {step} of {totalSteps}
+            </p>
           </div>
-          <p className="text-sm text-muted-foreground">Step {step} of {totalSteps}</p>
         </DialogHeader>
 
-        <div className="py-4">
+        <div className="py-3 sm:py-4 overflow-y-auto max-h-[60vh] sm:max-h-[50vh]">
           {renderStep()}
         </div>
 
-        <div className="flex justify-between gap-3">
+        <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 pt-2">
           {step > 1 ? (
-            <Button variant="outline" onClick={() => setStep(step - 1)}>
+            <Button 
+              variant="outline" 
+              onClick={() => setStep(step - 1)}
+              className="h-11 sm:h-10 w-full sm:w-auto order-2 sm:order-1"
+            >
               <ArrowLeft className="w-4 h-4 mr-2" />
               Back
             </Button>
           ) : (
-            <div />
+            <div className="order-2 sm:order-1 sm:flex-1" />
           )}
 
           {step < totalSteps ? (
             <Button 
               onClick={() => setStep(step + 1)} 
               disabled={!canProceed()}
-              className="ml-auto"
+              className="h-11 sm:h-10 w-full sm:w-auto order-1 sm:order-2"
             >
               Next
               <ArrowRight className="w-4 h-4 ml-2" />
@@ -341,14 +369,16 @@ export const ContactFormModal = ({
               variant="whatsapp" 
               onClick={handleSubmit} 
               disabled={isSubmitting || !canProceed()}
-              className="ml-auto"
+              className="h-11 sm:h-10 w-full sm:w-auto order-1 sm:order-2"
             >
               {isSubmitting ? (
                 <Loader2 className="w-4 h-4 mr-2 animate-spin" />
               ) : (
                 <MessageCircle className="w-4 h-4 mr-2" />
               )}
-              Submit & Chat on WhatsApp
+              <span className="text-sm sm:text-base">
+                Submit & Chat on WhatsApp
+              </span>
             </Button>
           )}
         </div>

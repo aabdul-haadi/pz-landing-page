@@ -17,10 +17,10 @@ export const HeroSection = () => {
         <div className="absolute bottom-20 right-10 w-64 md:w-96 h-64 md:h-96 bg-accent rounded-full blur-3xl" />
       </div>
 
-      <div className="container relative z-10 px-4 py-8 md:py-16">
+      <div className="container relative z-10 px-4 py-6 md:py-12">
         <div className="max-w-4xl mx-auto text-center">
           {/* Animated Logo */}
-          <div className="flex justify-center mb-6 md:mb-8">
+          <div className="flex justify-center mb-4 md:mb-6">
             <div className="relative">
               <div className="absolute inset-0 bg-primary/20 rounded-full blur-xl animate-pulse-gentle" />
               <img 
@@ -32,19 +32,19 @@ export const HeroSection = () => {
           </div>
 
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-3 md:px-4 py-1.5 md:py-2 mb-4 md:mb-6 text-xs md:text-sm font-medium rounded-full bg-primary/10 text-primary animate-fade-in">
+          <div className="inline-flex items-center gap-2 px-3 md:px-4 py-1.5 md:py-2 mb-3 md:mb-4 text-xs md:text-sm font-medium rounded-full bg-primary/10 text-primary animate-fade-in">
             <GraduationCap className="w-3 h-3 md:w-4 md:h-4" />
             <span>University • Master's • PhD Level Consultation</span>
           </div>
 
           {/* Main Headline */}
-          <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold text-foreground mb-4 md:mb-6 leading-tight animate-fade-in-up text-balance">
+          <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold text-foreground mb-3 md:mb-4 leading-tight animate-fade-in-up text-balance">
             Stuck on Your Project?{" "}
             <span className="text-primary">We'll Guide You Through.</span>
           </h1>
 
           {/* Subheadline */}
-          <p className="text-sm sm:text-base md:text-xl text-muted-foreground mb-6 md:mb-8 max-w-2xl mx-auto animate-fade-in-up text-balance" style={{ animationDelay: "0.1s" }}>
+          <p className="text-sm sm:text-base md:text-xl text-muted-foreground mb-4 md:mb-6 max-w-2xl mx-auto animate-fade-in-up text-balance" style={{ animationDelay: "0.1s" }}>
             Expert academic consultation to help you understand, plan, and execute your projects. 
             Learn the concepts. Build confidence. Ace your viva.
           </p>
@@ -61,7 +61,7 @@ export const HeroSection = () => {
           </div>
 
           {/* Trust indicators */}
-          <div className="flex flex-wrap justify-center gap-4 md:gap-10 mt-6 md:mt-10 animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
+          <div className="flex flex-wrap justify-center gap-4 md:gap-10 mt-4 md:mt-8 animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
             <div className="flex items-center gap-2 text-muted-foreground">
               <img src={icon1} alt="Quick Response" className="w-4 h-4 md:w-5 md:h-5" />
               <span className="text-xs md:text-sm font-medium">Quick Response</span>

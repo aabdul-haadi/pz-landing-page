@@ -13,21 +13,21 @@ const solutions = [
 
 export const SolutionSection = () => {
   return (
-    <section className="py-8 md:py-16 bg-background">
+    <section className="py-6 md:py-12 bg-background">
       <div className="container px-4">
         <div className="max-w-5xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-10 items-center">
             {/* Content */}
             <div>
-              <h2 className="text-2xl md:text-4xl font-bold text-foreground mb-4 md:mb-6">
+              <h2 className="text-2xl md:text-4xl font-bold text-foreground mb-3 md:mb-4">
                 How <span className="text-primary">Project Zone</span> Guides You
               </h2>
-              <p className="text-muted-foreground text-sm md:text-lg mb-6 md:mb-8">
+              <p className="text-muted-foreground text-sm md:text-lg mb-4 md:mb-6">
                 We don't do your project for you — we teach you how to do it yourself. 
                 Our mentors guide you step-by-step so you truly understand your work.
               </p>
 
-              <ul className="space-y-3 md:space-y-4 mb-6 md:mb-8">
+              <ul className="space-y-3 md:space-y-4 mb-4 md:mb-6">
                 {solutions.map((solution, index) => (
                   <li key={index} className="flex items-start gap-2 md:gap-3">
                     <CheckCircle2 className="w-4 h-4 md:w-5 md:h-5 text-accent flex-shrink-0 mt-0.5" />

@@ -17,14 +17,14 @@ const reliefMessages = [
 
 export const StressReliefSection = () => {
   return (
-    <section className="py-8 md:py-12 bg-gradient-to-br from-primary/5 to-accent/5">
+    <section className="py-6 md:py-10 bg-gradient-to-br from-primary/5 to-accent/5">
       <div className="container px-4">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-xl md:text-3xl font-bold text-foreground mb-6 md:mb-10">
+          <h2 className="text-xl md:text-3xl font-bold text-foreground mb-4 md:mb-8">
             Take a Deep Breath
           </h2>
           
-          <div className="space-y-4 md:space-y-6">
+          <div className="space-y-3 md:space-y-4">
             {reliefMessages.map((message, index) => (
               <div
                 key={index}
