@@ -41,7 +41,8 @@ export const Header = () => {
         <div className="flex items-center justify-between h-14 md:h-16">
           {/* Logo */}
           <a href="/" className="flex items-center gap-2">
-            <img src={logo} alt="Project Zone" className="w-10 h-10 md:w-12 md:h-12 object-contain" />
+            <span className="md:hidden font-black text-lg text-foreground">ProjectZone</span>
+            <img src={logo} alt="Project Zone" className="hidden md:block w-10 h-10 md:w-12 md:h-12 object-contain" />
           </a>
 
           {/* Desktop Navigation */}
