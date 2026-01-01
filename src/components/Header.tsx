@@ -3,7 +3,6 @@ import { Menu, X } from "lucide-react";
 import { WhatsAppButton } from "./WhatsAppButton";
 import { ContactFormModal } from "./ContactFormModal";
 import { Button } from "./ui/button";
-import logo from "@/assets/logo.png";
 
 const navLinks = [
   { href: "#services", label: "Services" },
@@ -39,10 +38,11 @@ export const Header = () => {
     }`}>
       <div className="container px-4">
         <div className="flex items-center justify-between h-14 md:h-16">
-          {/* Logo */}
+          {/* Logo Text - Now visible on both mobile and desktop */}
           <a href="/" className="flex items-center gap-2">
-            <span className="md:hidden font-black text-lg text-foreground">ProjectZone</span>
-            <img src={logo} alt="Project Zone" className="hidden md:block w-10 h-10 md:w-12 md:h-12 object-contain" />
+            <span className="font-black text-lg sm:text-xl md:text-2xl text-foreground tracking-tight">
+              ProjectZone
+            </span>
           </a>
 
           {/* Desktop Navigation */}
